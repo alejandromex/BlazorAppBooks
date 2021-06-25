@@ -1,0 +1,12 @@
+C:\Users\USUARIO\source\repos\BlazorCRUD\BlazorCRUD.Data.Dapper\bin\Debug\netcoreapp3.1\BlazorCRUD.Data.Dapper.deps.json
+C:\Users\USUARIO\source\repos\BlazorCRUD\BlazorCRUD.Data.Dapper\bin\Debug\netcoreapp3.1\BlazorCRUD.Data.Dapper.dll
+C:\Users\USUARIO\source\repos\BlazorCRUD\BlazorCRUD.Data.Dapper\bin\Debug\netcoreapp3.1\BlazorCRUD.Data.Dapper.pdb
+C:\Users\USUARIO\source\repos\BlazorCRUD\BlazorCRUD.Data.Dapper\obj\Debug\netcoreapp3.1\BlazorCRUD.Data.Dapper.csprojAssemblyReference.cache
+C:\Users\USUARIO\source\repos\BlazorCRUD\BlazorCRUD.Data.Dapper\obj\Debug\netcoreapp3.1\BlazorCRUD.Data.Dapper.AssemblyInfoInputs.cache
+C:\Users\USUARIO\source\repos\BlazorCRUD\BlazorCRUD.Data.Dapper\obj\Debug\netcoreapp3.1\BlazorCRUD.Data.Dapper.AssemblyInfo.cs
+C:\Users\USUARIO\source\repos\BlazorCRUD\BlazorCRUD.Data.Dapper\obj\Debug\netcoreapp3.1\BlazorCRUD.Data.Dapper.csproj.CoreCompileInputs.cache
+C:\Users\USUARIO\source\repos\BlazorCRUD\BlazorCRUD.Data.Dapper\obj\Debug\netcoreapp3.1\BlazorCRUD.Data.Dapper.dll
+C:\Users\USUARIO\source\repos\BlazorCRUD\BlazorCRUD.Data.Dapper\obj\Debug\netcoreapp3.1\BlazorCRUD.Data.Dapper.pdb
+C:\Users\USUARIO\source\repos\BlazorCRUD\BlazorCRUD.Data.Dapper\bin\Debug\netcoreapp3.1\BlazorCRUD.Model.dll
+C:\Users\USUARIO\source\repos\BlazorCRUD\BlazorCRUD.Data.Dapper\bin\Debug\netcoreapp3.1\BlazorCRUD.Model.pdb
+C:\Users\USUARIO\source\repos\BlazorCRUD\BlazorCRUD.Data.Dapper\obj\Debug\netcoreapp3.1\BlazorCRUD.Data.Dapper.csproj.CopyComplete

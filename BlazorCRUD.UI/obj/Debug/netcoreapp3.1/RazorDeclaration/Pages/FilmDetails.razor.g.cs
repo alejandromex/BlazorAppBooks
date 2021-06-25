@@ -76,20 +76,21 @@ using BlazorCRUD.UI.Shared;
 #line hidden
 #nullable disable
 #nullable restore
-#line 2 "C:\Users\USUARIO\source\repos\BlazorCRUD\BlazorCRUD.UI\Pages\FilmDetails.razor"
+#line 3 "C:\Users\USUARIO\source\repos\BlazorCRUD\BlazorCRUD.UI\Pages\FilmDetails.razor"
 using Model;
 
 #line default
 #line hidden
 #nullable disable
 #nullable restore
-#line 3 "C:\Users\USUARIO\source\repos\BlazorCRUD\BlazorCRUD.UI\Pages\FilmDetails.razor"
+#line 4 "C:\Users\USUARIO\source\repos\BlazorCRUD\BlazorCRUD.UI\Pages\FilmDetails.razor"
 using Interfaces;
 
 #line default
 #line hidden
 #nullable disable
     [Microsoft.AspNetCore.Components.RouteAttribute("/filmdetails")]
+    [Microsoft.AspNetCore.Components.RouteAttribute("/filmdetails/{id:int}")]
     public partial class FilmDetails : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
@@ -98,8 +99,12 @@ using Interfaces;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 34 "C:\Users\USUARIO\source\repos\BlazorCRUD\BlazorCRUD.UI\Pages\FilmDetails.razor"
+#line 35 "C:\Users\USUARIO\source\repos\BlazorCRUD\BlazorCRUD.UI\Pages\FilmDetails.razor"
        
+
+    [Parameter]
+    public int id { get; set; }
+
     Film film = new Film();
 
     protected void CancelFilm()
@@ -110,6 +115,18 @@ using Interfaces;
     protected async Task SaveFilm()
     {
         await FilmService.SaveFilm(film);
+    }
+
+    protected async override Task OnInitializedAsync()
+    {
+        if(id == 0)
+        {
+            film.ReleaseDate = DateTime.Now;
+        }
+        else
+        {
+            film = await FilmService.GetDetails(id);
+        }
     }
 
 

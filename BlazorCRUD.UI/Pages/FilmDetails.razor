@@ -1,4 +1,5 @@
-﻿@page "/filmdetails"
+﻿@page "/filmdetails";
+@page "/filmdetails/{id:int}" 
 @using Model;
 @using Interfaces;
 @inject IFilmService FilmService;
@@ -32,6 +33,10 @@
 
 
 @code {
+
+    [Parameter]
+    public int id { get; set; }
+
     Film film = new Film();
 
     protected void CancelFilm()
@@ -42,6 +47,18 @@
     protected async Task SaveFilm()
     {
         await FilmService.SaveFilm(film);
+    }
+
+    protected async override Task OnInitializedAsync()
+    {
+        if(id == 0)
+        {
+            film.ReleaseDate = DateTime.Now;
+        }
+        else
+        {
+            film = await FilmService.GetDetails(id);
+        }
     }
 
 }

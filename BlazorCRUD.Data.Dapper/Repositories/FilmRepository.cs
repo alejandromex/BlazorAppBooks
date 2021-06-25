@@ -26,14 +26,19 @@ namespace BlazorCRUD.Data.Dapper.Repositories
             throw new NotImplementedException();
         }
 
-        public Task<IEnumerable<Film>> GetAllFilms()
+        public async Task<IEnumerable<Film>> GetAllFilms()
         {
-            throw new NotImplementedException();
+            var db = dbConnection();
+            var sql = @"SELECT * FROM films";
+            return await db.QueryAsync<Film>(sql.ToString(), new { });
         }
 
-        public Task<Film> GetFilmDetails(int id)
+        public async Task<Film> GetFilmDetails(int id)
         {
-            throw new NotImplementedException();
+            var db = dbConnection();
+            var sql = @"SELECT * FROM films where id = @id";
+            var film = await db.QueryFirstOrDefaultAsync<Film>(sql, new { id });
+            return film;
         }
 
         public async Task<bool> InsertFilm(Film film)
@@ -48,9 +53,14 @@ namespace BlazorCRUD.Data.Dapper.Repositories
             return result > 0;
         }
 
-        public Task<bool> UpdateFilm(Film film)
+        public async Task<bool> UpdateFilm(Film film)
         {
-            throw new NotImplementedException();
+            var db = dbConnection();
+            var sql = @"
+                        UPDATE films set title = @title, Director = @Director, ReleaseDate = @ReleaseDate where id = @id
+                        ";
+            var result = await db.ExecuteAsync(sql.ToString(), new { film.Title, film.Director, film.ReleaseDate, film.id });
+            return result > 0;
         }
     }
 }

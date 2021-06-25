@@ -58,3 +58,5 @@ C:\Users\USUARIO\source\repos\BlazorCRUD\BlazorCRUD.UI\bin\Debug\netcoreapp3.1\r
 C:\Users\USUARIO\source\repos\BlazorCRUD\BlazorCRUD.UI\bin\Debug\netcoreapp3.1\runtimes\win-x86\native\sni.dll
 C:\Users\USUARIO\source\repos\BlazorCRUD\BlazorCRUD.UI\bin\Debug\netcoreapp3.1\runtimes\unix\lib\netcoreapp2.1\System.Data.SqlClient.dll
 C:\Users\USUARIO\source\repos\BlazorCRUD\BlazorCRUD.UI\bin\Debug\netcoreapp3.1\runtimes\win\lib\netcoreapp2.1\System.Data.SqlClient.dll
+C:\Users\USUARIO\source\repos\BlazorCRUD\BlazorCRUD.UI\obj\Debug\netcoreapp3.1\RazorDeclaration\Pages\FilmList.razor.g.cs
+C:\Users\USUARIO\source\repos\BlazorCRUD\BlazorCRUD.UI\obj\Debug\netcoreapp3.1\Razor\Pages\FilmList.razor.g.cs

@@ -4,7 +4,7 @@
 #pragma warning disable 0649
 #pragma warning disable 0169
 
-namespace BlazorCRUD.UI.Shared
+namespace BlazorCRUD.UI.Pages
 {
     #line hidden
     using System;
@@ -75,7 +75,22 @@ using BlazorCRUD.UI.Shared;
 #line default
 #line hidden
 #nullable disable
-    public partial class NavMenu : Microsoft.AspNetCore.Components.ComponentBase
+#nullable restore
+#line 2 "C:\Users\USUARIO\source\repos\BlazorCRUD\BlazorCRUD.UI\Pages\FilmList.razor"
+using Model;
+
+#line default
+#line hidden
+#nullable disable
+#nullable restore
+#line 3 "C:\Users\USUARIO\source\repos\BlazorCRUD\BlazorCRUD.UI\Pages\FilmList.razor"
+using Interfaces;
+
+#line default
+#line hidden
+#nullable disable
+    [Microsoft.AspNetCore.Components.RouteAttribute("/filmlist")]
+    public partial class FilmList : Microsoft.AspNetCore.Components.ComponentBase
     {
         #pragma warning disable 1998
         protected override void BuildRenderTree(Microsoft.AspNetCore.Components.Rendering.RenderTreeBuilder __builder)
@@ -83,20 +98,30 @@ using BlazorCRUD.UI.Shared;
         }
         #pragma warning restore 1998
 #nullable restore
-#line 28 "C:\Users\USUARIO\source\repos\BlazorCRUD\BlazorCRUD.UI\Shared\NavMenu.razor"
-       
-    private bool collapseNavMenu = true;
+#line 42 "C:\Users\USUARIO\source\repos\BlazorCRUD\BlazorCRUD.UI\Pages\FilmList.razor"
+               
 
-    private string NavMenuCssClass => collapseNavMenu ? "collapse" : null;
+    private IEnumerable<Film> films;
 
-    private void ToggleNavMenu()
+    protected override async Task OnInitializedAsync()
     {
-        collapseNavMenu = !collapseNavMenu;
+        try
+        {
+            films = await FilmService.GetAllFilms();
+            
+        }
+        catch(Exception ex)
+            {
+                
+            }
+
     }
+
 
 #line default
 #line hidden
 #nullable disable
+        [global::Microsoft.AspNetCore.Components.InjectAttribute] private IFilmService FilmService { get; set; }
     }
 }
 #pragma warning restore 1591
